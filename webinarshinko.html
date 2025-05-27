@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <title>Formulario de Registro para Webinar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://i.ibb.co/Mxn00nHy/Leonardo-Phoenix-10-A-futuristic-and-minimalist-tech-workspace-0-2.jpg');
+            background-size: cover; /* Ajusta el zoom de la imagen */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            color: #333333;
+            padding: 0; /* Elimina el padding por defecto */
+            margin: 0; /* Elimina el margen por defecto */
+            height: 100vh; /* Asegura que el fondo cubra toda la altura de la ventana */
+            display: flex; /* Flexbox para centrar el contenido */
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
+        }
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con algo de transparencia */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px; /* Ancho máximo del formulario ajustado */
+            height: 90%; /* Ajusta la altura del formulario */
+            overflow: auto; /* Permite desplazamiento si es necesario */
+        }
+        h1 {
+            color: #d9534f; /* Rojo */
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+            color: #333333; /* Negro */
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #cccccc; /* Gris */
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #d9534f; /* Rojo */
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #c9302c; /* Rojo oscuro */
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>¡Inscríbete en Nuestro Webinar!</h1>
+        <p>Completa el siguiente formulario para asegurar tu lugar en nuestro próximo webinar. Estamos emocionados de contar contigo.</p>
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D4W000000Grvm" method="POST">
+            <input type="hidden" name="oid" value="00D4W000000Grvm">
+            <input type="hidden" name="retURL" value="https://www.shinko-it.com/">
+            <input type="hidden" name="lead_source" value="Webinar">
+
+            <label for="first_name">Nombre</label>
+            <input id="first_name" maxlength="40" name="first_name" size="20" type="text" required />
+
+            <label for="last_name">Apellidos</label>
+            <input id="last_name" maxlength="80" name="last_name" size="20" type="text" required />
+
+            <label for="email">Correo electrónico</label>
+            <input id="email" maxlength="80" name="email" size="20" type="email" required />
+
+            <label for="mobile">Móvil</label>
+            <input id="mobile" maxlength="40" name="mobile" size="20" type="text" required />
+
+            <label for="company">Compañía</label>
+            <input id="company" maxlength="40" name="company" size="20" type="text" required />
+
+            <label for="industry">Sector</label>
+            <select id="industry" name="industry" required>
+                <option value="">--Ninguno--</option>
+                <option value="Agriculture">Agricultura</option>
+                <option value="Apparel">Vestimenta</option>
+                <option value="Banking">Banca</option>
+                <option value="Biotechnology">Biotecnología</option>
+                <option value="Chemicals">Químicos</option>
+                <option value="Communications">Comunicaciones</option>
+                <option value="Construction">Construcción</option>
+                <option value="Consulting">Consultoría</option>
+                <option value="Education">Educación</option>
+                <option value="Electronics">Electrónica</option>
+                <option value="Energy">Energía</option>
+                <option value="Engineering">Ingeniería</option>
+                <option value="Entertainment">Entretenimiento</option>
+                <option value="Environmental">Medio Ambiente</option>
+                <option value="Finance">Finanzas</option>
+                <option value="Food & Beverage">Alimentos y Bebidas</option>
+                <option value="Government">Gobierno</option>
+                <option value="Healthcare">Salud</option>
+                <option value="Hospitality">Hospitalidad</option>
+                <option value="Insurance">Seguros</option>
+                <option value="Machinery">Maquinaria</option>
+                <option value="Manufacturing">Manufactura</option>
+                <option value="Media">Medios</option>
+                <option value="Not For Profit">Sin Fines de Lucro</option>
+                <option value="Other">Otro</option>
+                <option value="Recreation">Recreación</option>
+                <option value="Retail">Retail</option>
+                <option value="Shipping">Envío</option>
+                <option value="Technology">Tecnología</option>
+                <option value="Telecommunications">Telecomunicaciones</option>
+                <option value="Transportation">Transporte</option>
+                <option value="Utilities">Servicios Públicos</option>
+            </select>
+
+            <label for="title">Cargo</label>
+            <input id="title" maxlength="40" name="title" size="20" type="text" required />
+
+            <label for="employees">Número de empleados</label>
+            <input id="employees" name="employees" size="20" type="number" required />
+
+            <label for="country">País</label>
+            <input id="country" maxlength="40" name="country" size="20" type="text" required />
+
+            <label for="00NUr000003Szrd">¿Tienes alguna pregunta que te gustaría que respondamos durante el evento?</label>
+            <textarea id="00NUr000003Szrd" name="00NUr000003Szrd" wrap="soft" required></textarea>
+
+            <input type="submit" name="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+</html>
